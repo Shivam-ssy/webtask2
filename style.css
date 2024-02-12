@@ -1,0 +1,99 @@
+html,body{
+    scroll-behavior: smooth;
+    
+}
+.main{
+   opacity: 1;
+   z-index: -1;
+}
+.pages{
+    overflow: hidden;
+   opacity: 1;
+   position: relative;
+   z-index: -1;
+}
+.progressCircle{
+    position: fixed;
+    width: 22em;
+    height:22em;
+    border-radius: 100%;
+    top: 5%;
+    left: 30%;
+    background-color: transparent;
+}
+
+.page-heading{
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    width:fit-content;
+    top: 30%;
+    left: -10%;
+    opacity: 1;
+    color: white;
+    overflow: hidden;
+    z-index:99 !important;
+    transition: all 2sec ease-in-out;
+}
+
+
+.page-heading>div{
+    text-align: right;
+}
+.page-heading>span{
+    text-align: left;
+    
+}
+
+.left-part{
+    width: 45%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 3em 4em;
+    gap: 1em;
+    position: relative;
+}
+.right-part{
+    width: 60%;
+    position: relative;
+}
+.left-part>h1{
+    margin-bottom: -0.1em;
+}
+.right-part{
+    height: 100vh;
+}
+#page4 img{
+    width: 60%;
+}
+
+    
+@media screen and (max-width:766px) {
+    
+    .page-heading{
+        display: none;
+        z-index: 99;
+    }
+    .left-part{
+        width: 100vw;
+        height: 45vh;
+        position: relative;
+        overflow: visible;
+        
+    }
+    .left-part img{
+        position: absolute;
+        top:0;
+        
+    }
+    
+    .right-part{
+        width: 100vw;
+        height: 55vh;
+        overflow: hidden;   
+    }  
+      
+}
