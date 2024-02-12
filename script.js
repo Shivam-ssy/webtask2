@@ -13,6 +13,7 @@ function removeHeading(){
   })
 }
 removeHeading()
+pageHeading[currentItemIndex].style.display="inline-block"
 function forDesktop(){
   $(document).ready(function(){
        owl = $('.main').owlCarousel({
