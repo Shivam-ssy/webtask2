@@ -170,6 +170,27 @@ function forMobile(){
            }
           },
         );
+        window.addEventListener(
+          "touchstart",
+          function (e) {
+              touchStartX = e.touches[0].clientX;
+          }
+      );
+      
+      window.addEventListener(
+          "touchmove",
+          function (e) {
+              e.preventDefault();
+             let touchEndX = e.touches[0].clientX;
+              let deltaX = touchEndX - touchStartX;
+      
+              if (deltaX > 50 && !slide) { // adjust the threshold for swipe detection
+                  slideNext();
+              } else if (deltaX < -50 && !slide) { // adjust the threshold for swipe detection
+                  slidePrev();
+              }
+          }
+      );
       });
   
 }
