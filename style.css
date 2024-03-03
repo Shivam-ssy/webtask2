@@ -1,6 +1,5 @@
-html,body{
-    scroll-behavior: smooth;
-    
+html, body{
+    scroll-behavior: instant;
 }
 .main{
    opacity: 1;
@@ -10,7 +9,6 @@ html,body{
     overflow: hidden;
    opacity: 1;
    position: relative;
-   z-index: -1;
 }
 .progressCircle{
     position: fixed;
@@ -27,8 +25,8 @@ html,body{
     display: flex;
     flex-direction: column;
     width:fit-content;
-    top: 30%;
-    left: -10%;
+    top: 20%;
+    right: 2%;
     opacity: 1;
     color: white;
     overflow: hidden;
@@ -36,7 +34,10 @@ html,body{
     transition: all 2sec ease-in-out;
 }
 
-
+.logo-details img{
+    height: 4em;
+    
+}
 .page-heading>div{
     text-align: right;
 }
@@ -44,7 +45,11 @@ html,body{
     text-align: left;
     
 }
-
+.page-text{
+    opacity: 1;
+    overflow: hidden;
+    height: fit-content;
+}
 .left-part{
     width: 45%;
     height: 100vh;
@@ -69,13 +74,29 @@ html,body{
 #page4 img{
     width: 60%;
 }
-
+#mob-dots{
+    display:none;
+}
     
 @media screen and (max-width:766px) {
-    
+    .main{
+        height: 100vh;
+        overflow: hidden;
+    }
+    .owl-carousel .owl-dots{
+        position:absolute;
+        left: 50%;
+        transform: translate(-50%,0);
+        bottom: 1em;
+        z-index:99 !important;
+        
+    }
+   
+  
     .page-heading{
         display: none;
         z-index: 99;
+        
     }
     .left-part{
         width: 100vw;
