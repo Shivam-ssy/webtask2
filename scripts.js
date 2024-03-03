@@ -185,9 +185,9 @@ function forMobile(){
               let deltaX = touchEndX - touchStartX;
       
               if (deltaX > 50 && !slide) { // adjust the threshold for swipe detection
-                  slideNext();
+                slidePrev();
               } else if (deltaX < -50 && !slide) { // adjust the threshold for swipe detection
-                  slidePrev();
+                slideNext();
               }
           }
       );
